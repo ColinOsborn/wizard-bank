@@ -11,13 +11,21 @@ attr_reader :name, :galleons
 end
 
 class Bank
-attr_reader :name
+attr_reader
 
-  def initialize(name)
+  def initialize(name, galleons, bank_name)
     @name = name
+    @galleons = galleons
+    @bank_name = bank_name
   end
 
-  def name
-    "#{@name} bank has been created."
+  def bank_name
+    "#{@bank_name} bank has been created."
+  end
+
+  def open_account
+    "#{@name} has opened an account with #{@bank_name} with #{@galleons}."
+    #have this shit respond back with who opened it, and then their
+    #balance as well too so you have a print out of whats going on
   end
 end

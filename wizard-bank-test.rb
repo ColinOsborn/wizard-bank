@@ -27,14 +27,28 @@ end
 
 class BankTest < Minitest::Test
 
-    def test_chase_bank_created
-      chase = Bank.new("Chase")
-      assert_equal "Chase bank has been created.", chase.name
+    # def test_chase_bank_created
+    #   chase = Bank.new("Chase")
+    #   chase.bank_name
+    #   assert_equal "Chase bank has been created.", chase.bank_name
+    # end
+    #
+    # def test_wellsy_bank_created
+    #   wellsy = Bank.new("Wells Fargo")
+    #   wellsy.bank_name
+    #   assert_equal "Wells Fargo bank has been created.", wellsy.bank_name
+    # end
+
+    def test_open_account_with_coin
+      acopen = Bank.new("Minerva", 1000, "Wells Fargo")
+      acopen.open_account
+      assert_equal "Minerva has opened an account with Wells Fargo with 1000.",acopen.open_account
     end
 
-    def test_wellsy_bank_created
-      wellsy = Bank.new("Wells Fargo")
-      assert_equal "Wells Fargo bank has been created.", wellsy.name
+    def test_open_account_with_coin_dos
+      anotheropen = Bank.new("Luna", 500, "Chase")
+      anotheropen.open_account
+      assert_equal "Luna has opened an account with Chase with 500.",anotheropen.open_account
     end
 
 end
