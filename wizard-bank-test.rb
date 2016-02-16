@@ -51,4 +51,9 @@ class BankTest < Minitest::Test
       assert_equal "Luna has opened an account with Chase with 500.",anotheropen.open_account
     end
 
+    # def test_does_deposit_work
+    #   depositme = Bank.new("")
+    #
+    # end
+
 end

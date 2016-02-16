@@ -6,7 +6,7 @@ attr_reader :name, :galleons
   def initialize(name, galleons)
     @name = name
     @galleons = galleons
-    "#{@name} has been created with #{@galleons} galleons in cash."
+    puts "#{@name} has been created with #{@galleons} galleons in cash."
   end
 end
 
@@ -20,12 +20,16 @@ attr_reader
   end
 
   def bank_name
-    "#{@bank_name} bank has been created."
+    puts "#{@bank_name} bank has been created."
   end
 
   def open_account
-    "#{@name} has opened an account with #{@bank_name} with #{@galleons}."
+    puts "#{@name} has opened an account with #{@bank_name} with #{@galleons}."
     #have this shit respond back with who opened it, and then their
     #balance as well too so you have a print out of whats going on
+  end
+
+  def deposit
+    @galleons = galleons + 100
   end
 end
